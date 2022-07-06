@@ -6,4 +6,4 @@ Simples Calculator project with HTML/CSS and JS from The Odin Project.
 
 
 Um projeto simples de calculadora com HTML/CSS e JS do The Odin Project  
-[**Clique aqui**](https://pedrorub1.github.io/Etch-a-Sketch/) para ver o resultado.
+[**Clique aqui**](https://pedrorub1.github.io/Calculator/) para ver o resultado.
