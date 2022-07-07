@@ -12,8 +12,6 @@ var number8 = document.querySelector('#btn8')
 var number9 = document.querySelector('#btn9')
 var numbers = [number0, number1, number2, number3, number4, number5, number6, number7, number8, number9]
 
-// after the calculator is funcional,create a 'limit' in screen,this 'limit' add more p tag and decreases font size in all p tang in screen,up antil 3
-
 var additionSign = document.querySelector('#btnAdd')
 var subtractionSign = document.querySelector('#btnSubtract')
 var multiplicationSign = document.querySelector('#btnMultiply')
@@ -44,7 +42,6 @@ function addOnScreen(btn) {
         p.innerHTML += btn.value
     }
 }
-numbers.map(addOnScreen)
 
 function operation(array, type) {
     let n = Number(p.textContent)
@@ -52,6 +49,7 @@ function operation(array, type) {
     lastOperation = type
     clearScreen()
 }
+
 
 function equal() {
     let result
@@ -78,6 +76,7 @@ function equal() {
         case '/':
             arrayDivi.push(n)
             result = arrayDivi.reduce((a,b) => a/b)
+            if (result === Infinity) result = 0
             p.innerHTML = result
             arrayDivi = []
             break;
@@ -85,11 +84,12 @@ function equal() {
         default:
             break;
     }
-    console.log(result)
+    
     haveResult = true
     result = undefined
 }
 
+numbers.map(addOnScreen)
 
 additionSign.onclick = () => operation(arrayAdd, '+')
 subtractionSign.onclick = () => operation(arraySubtr, '-')
