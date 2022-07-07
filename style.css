@@ -2,7 +2,7 @@
 :root {
     --color1: #FAA916;
     --color2: #FBFFFE;
-    --screen-color: #6D676E;
+    --color3: #6D676E;
     --color4: #1B1B1E;
     --color-border: #96031A;
 }
@@ -36,7 +36,7 @@ body{
 .screen {
     width: 450px;
     height: 70px;
-    background-color: #FBFFFE;
+    background-color: var(--color2);
     margin: 20px auto 30px auto;
     border: 2px solid var(--color-border);
     display: flex;
@@ -70,7 +70,7 @@ button {
     margin: 10px;
     font-size: 24px;
     border: 1px solid var(--color-border);
-    background-color: #FAA916;
+    background-color: var(--color1);
     display: inline-block;
     text-align: center;
     transition: 250ms;
@@ -78,10 +78,10 @@ button {
 
 button:hover {
     background-color: #a31c30;
-    color: #FBFFFE;
+    color: var(--color2);
 }
 
 button:active{
     background-color: #96031A;
-    border: 1px solid #FBFFFE;
+    border: 1px solid var(--color2);
 }
